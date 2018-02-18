@@ -1,6 +1,6 @@
-# Project 3 - *Thirst Tea*
+# Project 3 - *Vegan Friend*
 
-**Thirst Tea** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) to find drinks near you.
+**Vegan Friend** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) for when you're hanging out with your vegan/vegetarian friends.
 
 Time spent: **10** hours spent in total
 
