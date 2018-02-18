@@ -21,15 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-FM-J4U">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-FM-J4U">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="127" id="ezS-Vy-Xih" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="127"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="200" id="ezS-Vy-Xih" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ezS-Vy-Xih" id="Fw6-P3-0KL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="126.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oIS-ex-oEN">
@@ -85,6 +85,12 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addressLabel" destination="4k2-NI-ohe" id="6qa-b0-PaR"/>
+                                            <outlet property="categoriesLabel" destination="Jzc-9P-e9h" id="Wke-84-JK2"/>
+                                            <outlet property="distanceLabel" destination="cJT-M9-l5D" id="2CJ-Uk-0Pa"/>
+                                            <outlet property="nameLabel" destination="JjY-kf-3SO" id="DQg-ci-YN9"/>
+                                            <outlet property="ratingImageView" destination="7oS-8R-FSK" id="O1W-Cm-PKe"/>
+                                            <outlet property="reviewsCountLabel" destination="4k2-NI-ohe" id="Brs-Iu-ujk"/>
                                             <outlet property="thumbImageView" destination="oIS-ex-oEN" id="akY-KU-rSX"/>
                                         </connections>
                                     </tableViewCell>
@@ -100,6 +106,9 @@
                             <constraint firstItem="7tW-FM-J4U" firstAttribute="leading" secondItem="XhR-oz-92f" secondAttribute="leading" id="mwZ-Mw-viV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7tW-FM-J4U" id="76w-0R-Kun"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
