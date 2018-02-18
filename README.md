@@ -1,8 +1,8 @@
-# Project 3 - *iYelp*
+# Project 3 - *Thirst Tea*
 
-**iYelp** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
+**Thirst Tea** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) to find drinks near you.
 
-Time spent: **7** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
