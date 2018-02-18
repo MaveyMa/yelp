@@ -1,6 +1,6 @@
 # Project 3 - *Vegan Friend*
 
-**Vegan Friend** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) for when you're hanging out with your vegan/vegetarian friends.
+**Vegan Friend** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) for when you're hanging out with your vegan/vegetarian friends, and you want to show that you respect their dietary lifestyle; there's more options on the menu than just salad.
 
 Time spent: **10** hours spent in total
 
