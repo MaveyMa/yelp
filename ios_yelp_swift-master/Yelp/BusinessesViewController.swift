@@ -24,7 +24,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 120
     
-    Business.searchWithTerm(term: "Tea", completion: { (businesses: [Business]?, error: Error?) -> Void in
+    Business.searchWithTerm(term: "Drink", completion: { (businesses: [Business]?, error: Error?) -> Void in
       
       self.businesses = businesses
       self.tableView.reloadData()
