@@ -2,7 +2,7 @@
 
 **Vegan Friend** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api) for when you're hanging out with your vegan/vegetarian friends, and you want to show that you respect their dietary lifestyle; there's more options on the menu than just salad.
 
-Time spent: **10** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
@@ -10,7 +10,7 @@ The following **required** functionality is completed:
 
 - [x] Table rows for search results should be dynamic height according to the content height. (3pt)
 - [x] Custom cells should have the proper Auto Layout constraints. (+5pt)
-- [ ] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does). (+2pt)
+- [x] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does). (+2pt)
 
 The following **stretch** features are implemented:
 
@@ -38,6 +38,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+* Tried unsuccessfully to implement search functionality. 
+* Learned that in Auto Layout Constraints, Leading/Trailing Edges are different from Leading/Trailing Constraints
 
 ## License
 

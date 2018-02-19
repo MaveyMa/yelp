@@ -8,36 +8,26 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   var businesses: [Business]!
+  var searchBar = UISearchBar()
+  var queryString: String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let searchBar = UISearchBar()
+    
+    //let searchBar = UISearchBar
     navigationItem.titleView = searchBar
-
     searchBar.sizeToFit()
+    
     tableView.delegate = self
     tableView.dataSource = self
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 120
     
-    Business.searchWithTerm(term: "Vegan", completion: { (businesses: [Business]?, error: Error?) -> Void in
-      
-      self.businesses = businesses
-      self.tableView.reloadData()
-      if let businesses = businesses {
-        
-        for business in businesses {
-          print(business.name!)
-          print(business.address!)
-        }
-      }
-      
-    }
-    )
+    callYelpAPI("Vegan")
     
     /* Example of Yelp search with more search options specified
      Business.searchWithTerm("Restaurants", sort: .distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: Error!) -> Void in
@@ -74,4 +64,33 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
   }
   
   
+  func callYelpAPI(_ query: String) {
+    Business.searchWithTerm(term: query, completion: { (businesses: [Business]?, error: Error?) -> Void in
+      self.businesses = businesses
+      self.tableView.reloadData()
+      if let businesses = businesses {
+        for business in businesses {
+          print(business.name!)
+          print(business.address!)
+        }
+      }
+      
+    }
+    )
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.showsCancelButton = false
+    searchBar.text = ""
+    searchBar.resignFirstResponder()
+    self.tableView.reloadData()
+  }
+
+  func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    callYelpAPI(searchBar.text!)
+    self.tableView.reloadData()
+    searchBar.resignFirstResponder()
+  }
 }
+
+
